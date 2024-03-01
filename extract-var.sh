@@ -1,10 +1,12 @@
 #!/bin/bash
 
 # Get user input
-echo "Input initialization time in the form ##Z"
-read init
-echo "Input variable name."
-read var
+# echo "Input initialization time in the form ##Z"
+# read init
+# echo "Input variable name."
+# read var
+init=$1
+var=$2
 
 # Specify the directory
 directory="/mnt/drive2/wof-runs/$init"
