@@ -20,9 +20,9 @@ filename = args.filename
 path = args.path
 
 # Read in necessary variables
-T2 = xr.open_dataarray(path+"/T2/"+filename)
-HGT = xr.open_dataarray(path+"/HGT/"+filename)
-PSFC = xr.open_dataarray(path+"/PSFC/"+filename)
+T2 = xr.open_dataarray(path+"/T2/"+filename,decode_times=False)
+HGT = xr.open_dataarray(path+"/HGT/"+filename,decode_times=False)
+PSFC = xr.open_dataarray(path+"/PSFC/"+filename,decode_times=False)
 
 # Calculate MSLP
 MSLP = calc_mslp(T2,HGT,PSFC)
