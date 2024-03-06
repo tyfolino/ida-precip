@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for init in "21Z" "22Z" "23Z" "00Z"
+for init in "20Z" "01Z"
 do
     for var in "HGT" "T2" "PSFC"
     do
