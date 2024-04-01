@@ -3,6 +3,7 @@ import xarray as xr
 import numpy as np
 import argparse
 from xgcm import Grid
+from pathlib import Path
 
 def make_z(filename: str, path: str) -> None:
     # Read in necessary variables
@@ -32,6 +33,8 @@ def make_z(filename: str, path: str) -> None:
     z.to_netcdf(path+"/z/"+filename)
 
 def make_mslp(filename: str, path: str) -> None:
+    # If mslp directory doesn't exist, we need to make it
+    Path(path+"/mslp").mkdir(parents=True,exist_ok=True)
     # Read in necessary variables
     t2 = xr.open_dataarray(path+"/T2/"+filename,decode_times=False)
     hgt = xr.open_dataarray(path+"/HGT/"+filename,decode_times=False)
