@@ -6,6 +6,8 @@ from xgcm import Grid
 from pathlib import Path
 
 def make_z(filename: str, path: str) -> None:
+    # If z directory doesn't already exist, make one
+    Path(path+"/z").mkdir(parents=True,exist_ok=True)
     # Read in necessary variables
     ph = xr.open_dataarray(path+"/PH/"+filename,decode_times=False)
     phb = xr.open_dataarray(path+"/PHB/"+filename,decode_times=False)
@@ -55,6 +57,8 @@ def make_mslp(filename: str, path: str) -> None:
     mslp.to_netcdf(path+"/mslp/"+filename)
 
 def put_var_on_plevs(filename: str, path: str, varname: str) -> None:
+    # If varname directory doesn't exist, make it
+    Path(path+"/"+varname+"_plev").mkdir(parents=True,exist_ok=True)
     # Read in variables
     p = xr.open_dataarray(path+"/P/"+filename,decode_times=False)
     pb = xr.open_dataarray(path+"/PB/"+filename,decode_times=False)
@@ -66,10 +70,10 @@ def put_var_on_plevs(filename: str, path: str, varname: str) -> None:
 
     # Create grid and pressure levels
     grid = Grid(ds_pres, coords={"Z":{"center":"bottom_top"}}, periodic=False)
-    levels = np.array([85000, 70000, 50000, 30000, 20000])
+    levels = np.array([92500, 85000, 70000, 50000, 30000, 20000])
 
     # Regrid
-    var_pres = grid.transform(ds_pres.varname,"Z",levels,target_data=ds_pres.pres,
+    var_pres = grid.transform(ds_pres[varname],"Z",levels,target_data=ds_pres.pres,
                               method="log")
     var_pres = var_pres.rename(varname)
     

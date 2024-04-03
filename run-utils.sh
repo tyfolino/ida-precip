@@ -1,9 +1,12 @@
 #!/bin/bash
 
 # Function to call
-function="make_mslp"
+function="put_var_on_plevs"
 
-for init in "20Z" "01Z"
+# Only necessary if using put_var_on_plevs function
+varname="z"
+
+for init in "21Z" "22Z" "23Z" "00Z"
 do
     # Set path using initialization time
     path="/mnt/drive2/wof-runs/$init"
@@ -13,7 +16,7 @@ do
     do
         if [ -f "$file" ]; then
             filename=$(basename "$file")
-            python ~/ida-scripts/utils/utils.py $function $filename $path
+            python ~/ida-scripts/utils/utils.py $function $filename $path --varname $varname
         fi
     done
 done
