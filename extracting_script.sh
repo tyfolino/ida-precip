@@ -1,8 +1,8 @@
 #!/bin/bash
 
-for init in "20Z" "21Z" "22Z" "23Z"
+for init in "20Z"
 do
-    for var in "REL_VORT" "U" "V"
+    for var in "PB"
     do
         bash /home/janoski/ida-scripts/extract-var.sh $init $var
     done

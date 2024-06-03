@@ -1,9 +1,11 @@
 # import statements
+import wrf.destag
 import xarray as xr
 import numpy as np
 import argparse
 from xgcm import Grid
 from pathlib import Path
+import wrf
 
 def make_z(filename: str, path: str) -> None:
     # If z directory doesn't already exist, make one
@@ -80,6 +82,36 @@ def put_var_on_plevs(filename: str, path: str, varname: str) -> None:
     # Save out variable
     var_pres.to_netcdf(path+"/"+varname+"_plev/"+filename)
 
+def put_var_on_zlevs(filename: str, path: str, varname: str) -> None:
+    # If varname directory doesn't exist, make it
+    Path(path+"/"+varname+"_zlev").mkdir(parents=True,exist_ok=True)
+    # Read in variables
+    z = xr.open_dataarray(path+"/z/"+filename,decode_times=False)
+    var = xr.open_dataarray(path+"/"+varname+"/"+filename,decode_times=False)
+
+    # We sometimes have to destagger the grid
+    if("west_east_stag" in var.dims):
+        var = wrf.destagger(var,stagger_dim=-1,meta=True)
+        var = var.rename(varname)
+    elif("south_north_stag" in var.dims):
+        var = wrf.destagger(var,stagger_dim=-2,meta=True)
+        var = var.rename(varname)
+    else:
+        pass
+
+    merged = xr.merge([z,var])
+
+    # Create grid and z levels
+    grid = Grid(merged,coords={"Z":{"center":"bottom_top"}},periodic=False)
+    levels = np.array([500,1000,2000,3000,4000,5000,6000])
+
+    # Regrid
+    var_z = grid.transform(merged[varname],"Z",levels,target_data=merged.z,method="log")
+    var_z = var_z.rename(varname)
+
+    # Save out variable
+    var_z.to_netcdf(path+"/"+varname+"_zlev/"+filename)
+
 def main():
     parser = argparse.ArgumentParser(description='Calculate variables from WoFS.')
     parser.add_argument('function', type=str, help='Name of the function to call')
@@ -87,7 +119,7 @@ def main():
     parser.add_argument("path", help="The path of the desired WoFS initialization.")
     parser.add_argument(
         "--varname",nargs="?",const="z",help="The name of the variable to put on\
-            plevs.")
+            different vertical levels.")
     args = parser.parse_args()
 
     if args.function == 'make_z':
@@ -96,6 +128,8 @@ def main():
         make_mslp(args.filename, args.path)
     elif args.function == "put_var_on_plevs":
         put_var_on_plevs(args.filename,args.path,args.varname)
+    elif args.function == "put_var_on_zlevs":
+        put_var_on_zlevs(args.filename,args.path,args.varname)
     # Add more conditions for other functions as needed
 
 if __name__ == "__main__":
