@@ -15,6 +15,8 @@ By: Ty Janoski, Ph.D.
 City College of New York &
 NOAA National Severe Storms Laboratory
 
+[https://bit.ly/forecast-extreme-heat](https://bit.ly/forecast-extreme-heat)
+
 ---
 
 ## About me ☁️🌡️
@@ -69,7 +71,8 @@ NOAA National Severe Storms Laboratory
     - Radar, satellite, upper air, and surface observations
 2. Forecast models
     - How do they work? How do we interpret them?
-3. Activity
+
+- Activities throughout!
 
 ---
 
@@ -100,7 +103,7 @@ NOAA National Severe Storms Laboratory
 - Three important quantities from radar:
     1. Reflectivity
         - How much energy is bouncing back to the radar
-        - **Higher reflectivity = heavier precipitation**
+        - **Higher reflectivity =  larger particle size**
     2. Time delay
         - How long it takes for the energy to bounce back
         - **Shorter time delay = closer to the radar**
@@ -165,7 +168,7 @@ NOAA National Severe Storms Laboratory
 
 ---
 
-## Question: How far away do you think geosynchronous satellites are from Earth?
+## Question: How far away do you think geostationary satellites are from Earth?
 - A) 200 miles
 - B) 2,000 miles
 - C) 20,000 miles
@@ -447,10 +450,10 @@ Need help finding some of the features? Check out the 🛰️ imagery ;)
 
 ---
 
-<div style="text-align: center;">
+[<div style="text-align: center;">
   <img src="beryl-tracks-jul4.png" style="width:50%;"/>
   <p style="font-size: 14px;"><em>Source: Copernicus</em></p>
-</div>
+</div>](nhc.noaa.gov)
 
 ---
 
@@ -502,6 +505,7 @@ Need help finding some of the features? Check out the 🛰️ imagery ;)
 ---
 
 ## Forecast Model Activity: Finding heat waves
+- We are currently in a heat wave in NYC!
 - Using the same resources, can you find an area in the U.S. that is experiencing or will experience a heat wave in the next 7 days?
 - What makes you think it's a heat wave?
 - Is the heat wave expected to last for a long time? How long?
@@ -555,7 +559,7 @@ Need help finding some of the features? Check out the 🛰️ imagery ;)
 - **Contact me:**
   - Email: [tjanoski@ccny.cuny.edu](mailto:tjanoski@ccny.cuny.edu)
 
+---
 
-
-
-
+## If we have time...
+- Let's go through how I make a forecast for NYC
