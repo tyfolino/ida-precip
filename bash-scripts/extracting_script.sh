@@ -1,9 +1,9 @@
 #!/bin/bash
 
-for init in "20Z"
+for init in "20Z" "21Z" "22Z" "23Z"
 do
-    for var in "PB"
+    for var in "T" "QVAPOR"
     do
-        bash /home/janoski/ida-scripts/extract-var.sh $init $var
+        bash /home/janoski/ida-scripts/bash-scripts/extract-var.sh $init $var
     done
 done
