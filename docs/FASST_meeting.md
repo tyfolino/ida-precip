@@ -88,7 +88,7 @@ Ty Janoski<sup>1,2</sup>, James Booth<sup>1</sup>, Thomas Galarneau<sup>2</sup>
 ### Time evolution of composite reflectivity
 
 <div style="text-align: center;">
-  <img src="comp_refl.gif" alt="" style="width:95%;"/>
+  <img src="comp_refl_23to02.gif" alt="" style="width:95%;"/>
   <p style="font-size: 14px;"><em></em></p>
 </div>
 
@@ -116,24 +116,62 @@ Ty Janoski<sup>1,2</sup>, James Booth<sup>1</sup>, Thomas Galarneau<sup>2</sup>
 
 ---
 
-### Enhanced MLCAPE in wet ens. along Jersey Shore
+### Instability? MLCAPE greater in wet ens. in NJ
+
+<div style="text-align: center;">
+  <img src="mlcape_23_00_wet_dry_diff.png" alt="" style="width:70%;"/>
+  <p style="font-size: 14px;"><em></em></p>
+</div>
 
 ---
 
-### 500 mb circulation considerably different
+### Moisture may play a role too
+
+<div style="text-align: center;">
+  <img src="pw_23_00_wet_dry_diff.png" alt="" style="width:70%;"/>
+  <p style="font-size: 14px;"><em></em></p>
+</div>
 
 ---
 
-### Resulting geostrophic winds are very different too
+### Wet ens. has higher 500mb heights, especially in southern part of domain
+
+<div style="text-align: center;">
+  <img src="500mb_gz_23_00_diffs.png" alt="" style="width:60%;"/>
+  <p style="font-size: 14px;"><em></em></p>
+</div>
+
+---
+
+### Yielding different geostrophic winds...
+
+<div style="text-align: center;">
+  <img src="500mb_geo_winds_23_00_wet_dry_diff.png" alt="" style="width:60%;"/>
+  <p style="font-size: 14px;"><em></em></p>
+</div>
+
+---
+
+### More southwesterly flow in wet ens. 500mb winds
+
+<div style="text-align: center;">
+  <img src="500mb_actual_winds_23_00_wet_dry_diff.png" alt="" style="width:60%;"/>
+  <p style="font-size: 14px;"><em></em></p>
+</div>
 
 ---
 
 ## Next steps
 
+- Figure out what is going on—is it the overlying circulation? Or convective ingredients?
+- Explore other factors (moisture flux convergence, shear, etc.)
 - The same ensemble members generally make up the wet and dry ensembles with no overlap
   - Do these difference materialize at even earlier times?
   - Has the scene already been set ~6 hours before 1Z?
-- Other factors may be important
-  - Moisture convergence, shear, etc.
 - Compare to observations and/or reanalysis
-  - Are the key ingredients we are finding present in the observations?
+  - Are the key factors we are finding present in the observations?
+
+---
+
+  ## I'd love to hear your thoughts!
+  email: [tyler.janoski@noaa.gov](mailto:tyler.janoski@noaa.gov)
