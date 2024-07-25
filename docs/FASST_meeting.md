@@ -143,19 +143,19 @@ Ty Janoski<sup>1,2</sup>, James Booth<sup>1</sup>, Thomas Galarneau<sup>2</sup>
 
 ---
 
-### Yielding different geostrophic winds...
+### Different geostrophic winds...
 
 <div style="text-align: center;">
-  <img src="500mb_geo_winds_23_00_wet_dry_diff.png" alt="" style="width:60%;"/>
+  <img src="layer_average_geo_winds_wet_dry_diff.png" alt="" style="width:60%;"/>
   <p style="font-size: 14px;"><em></em></p>
 </div>
 
 ---
 
-### More southwesterly flow in wet ens. 500mb winds
+### More cyclonic flow in actual 850-500mb winds
 
 <div style="text-align: center;">
-  <img src="500mb_actual_winds_23_00_wet_dry_diff.png" alt="" style="width:60%;"/>
+  <img src="layer_average_winds_wet_dry_diff.png" alt="" style="width:60%;"/>
   <p style="font-size: 14px;"><em></em></p>
 </div>
 
