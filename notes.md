@@ -22,9 +22,9 @@ Wet: 5, 7, 8, 11
 ## October 29th, 2024
 To-do:
 - ~~Plot UH paintball plots~~
-- Look at spatial differences in Bunkers storm motion vector
-- Plot trajectory plots for 23, 0, and 1Z
-- Pick four gridboxes and plot wet & dry ensemble members hodographs, 1Z only, with our new vectors
+- ~~Look at spatial differences in Bunkers storm motion vector~~
+- ~~Plot trajectory plots for 23, 0, and 1Z~~
+- ~~Pick four gridboxes and plot wet & dry ensemble members hodographs, 1Z only, with our new vectors~~
 - Plot the theta-e field for say the wettest and driest member
 - Jennifer Catto, Sebastian Schwann ETH european front
 - Go back through the mesoscale textbook to see at what role fronts play in convection.
@@ -34,3 +34,5 @@ To-do:
 - Find theta-e fronts in wet vs dry ensembles
 - First part of paper will be overview, showing fields that we later look at in our ESA, hodographs etc.
 - Data will include radar, height maps, surface analyses, cyclone phase space, track map
+- Make hodographs just NW and SW
+- Pick one wet day and dry day and compare theta-e
