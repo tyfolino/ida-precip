@@ -36,3 +36,5 @@ To-do:
 - Data will include radar, height maps, surface analyses, cyclone phase space, track map
 - Make hodographs just NW and SW
 - Pick one wet day and dry day and compare theta-e
+
+- Add SLP to one plot.
