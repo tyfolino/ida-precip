@@ -13,6 +13,7 @@ paginate: true
 By: Ty Janoski, Ph.D.
 City College of New York \& NOAA National Severe Storms Laboratory
 March 26<sup>th</sup>, 2025
+[bit.ly/wpu-forecasting](https://bit.ly/wpu-forecasting)
 
 ---
 
